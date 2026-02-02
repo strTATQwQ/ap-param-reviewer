@@ -6,13 +6,10 @@ export default defineConfig({
   base: '/ap-param-reviewer/',
   plugins: [react()],
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-  server: {
-    proxy: {
-      '/google-api': {
-        target: 'https://generativelanguage.googleapis.com',
-        changeOrigin: true,
-        rewrite: (p) => p.replace(/^\/google-api/, '')
-      }
-    }
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    // 寮哄埗 Rollup 妫€鏌ユā鍧?
+    modulePreload: { polyfill: true }
   }
 });
