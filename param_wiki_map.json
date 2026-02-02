@@ -1,0 +1,2762 @@
+{
+  "F": {
+    "wiki_id": "complete-parameter-list",
+    "desc": "You can change and check the parameters for another version:",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#complete-parameter-list"
+  },
+  "A": {
+    "wiki_id": "arducopter-parameters",
+    "desc": "This value is incremented when changes are made to the eeprom format",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arducopter-parameters"
+  },
+  "VEHICLE": {
+    "wiki_id": "vehicle-parameters",
+    "desc": "Bitmask of flight modes to disable for GCS selection. Mode can still be accessed via RC or failsafe.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#vehicle-parameters"
+  },
+  "ADSB_": {
+    "wiki_id": "adsb-parameters",
+    "desc": "Type of ADS-B hardware for ADSB-in and ADSB-out configuration and operation. If any type is selected then MAVLink based ADSB-in messages will always be enabled",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#adsb-parameters"
+  },
+  "AFS_": {
+    "wiki_id": "afs-parameters",
+    "desc": "This enables the advanced failsafe system. If this is set to zero (disable) then all the other AFS options have no effect",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#afs-parameters"
+  },
+  "AHRS_": {
+    "wiki_id": "ahrs-parameters",
+    "desc": "This controls how much to use the GPS to correct the attitude. This should never be set to zero for a plane as it would result in the plane losing control in turns. For a plane please use the default value of 1.0.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ahrs-parameters"
+  },
+  "AIS_": {
+    "wiki_id": "ais-parameters",
+    "desc": "AIS receiver type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ais-parameters"
+  },
+  "ARMING_": {
+    "wiki_id": "arming-parameters",
+    "desc": "Accelerometer error threshold used to determine inconsistent accelerometers. Compares this error range to other accelerometers to detect a hardware or calibration error. Lower value means tighter check and harder to pass arming check. Not all accelerometers are created equal.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arming-parameters"
+  },
+  "AROT_": {
+    "wiki_id": "arot-parameters",
+    "desc": "Allows you to enable (1) or disable (0) the autonomous autorotation capability.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arot-parameters"
+  },
+  "ARSPD": {
+    "wiki_id": "arspd-parameters",
+    "desc": "Enable airspeed sensor support",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd-parameters"
+  },
+  "ARSPD2_": {
+    "wiki_id": "arspd2-parameters",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd2-parameters"
+  },
+  "ARSPD3_": {
+    "wiki_id": "arspd3-parameters",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd3-parameters"
+  },
+  "ARSPD4_": {
+    "wiki_id": "arspd4-parameters",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd4-parameters"
+  },
+  "ARSPD5_": {
+    "wiki_id": "arspd5-parameters",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd5-parameters"
+  },
+  "ARSPD6_": {
+    "wiki_id": "arspd6-parameters",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#arspd6-parameters"
+  },
+  "ARSPD_": {
+    "wiki_id": "id1",
+    "desc": "Type of airspeed sensor",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id1"
+  },
+  "ATC_": {
+    "wiki_id": "atc-parameters",
+    "desc": "Maximum rate the yaw target can be updated in RTL and Auto flight modes",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#atc-parameters"
+  },
+  "AUTOTUNE_": {
+    "wiki_id": "autotune-parameters",
+    "desc": "1-byte bitmap of axes to autotune",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#autotune-parameters"
+  },
+  "AVD_": {
+    "wiki_id": "avd-parameters",
+    "desc": "Enable Avoidance using ADSB",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#avd-parameters"
+  },
+  "AVOID_": {
+    "wiki_id": "avoid-parameters",
+    "desc": "Enabled/disable avoidance input sources",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#avoid-parameters"
+  },
+  "BARO": {
+    "wiki_id": "baro-parameters",
+    "desc": "calibrated ground pressure in Pascals",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#baro-parameters"
+  },
+  "BARO1_WCF_": {
+    "wiki_id": "baro1-wcf-parameters",
+    "desc": "This enables the use of wind coefficients for barometer compensation",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#baro1-wcf-parameters"
+  },
+  "BARO2_WCF_": {
+    "wiki_id": "baro2-wcf-parameters",
+    "desc": "This enables the use of wind coefficients for barometer compensation",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#baro2-wcf-parameters"
+  },
+  "BARO3_WCF_": {
+    "wiki_id": "baro3-wcf-parameters",
+    "desc": "This enables the use of wind coefficients for barometer compensation",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#baro3-wcf-parameters"
+  },
+  "BATT2_": {
+    "wiki_id": "batt2-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt2-parameters"
+  },
+  "BATT3_": {
+    "wiki_id": "batt3-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt3-parameters"
+  },
+  "BATT4_": {
+    "wiki_id": "batt4-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt4-parameters"
+  },
+  "BATT5_": {
+    "wiki_id": "batt5-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt5-parameters"
+  },
+  "BATT6_": {
+    "wiki_id": "batt6-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt6-parameters"
+  },
+  "BATT7_": {
+    "wiki_id": "batt7-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt7-parameters"
+  },
+  "BATT8_": {
+    "wiki_id": "batt8-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt8-parameters"
+  },
+  "BATT9_": {
+    "wiki_id": "batt9-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt9-parameters"
+  },
+  "BATTA_": {
+    "wiki_id": "batta-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batta-parameters"
+  },
+  "BATTB_": {
+    "wiki_id": "battb-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#battb-parameters"
+  },
+  "BATTC_": {
+    "wiki_id": "battc-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#battc-parameters"
+  },
+  "BATTD_": {
+    "wiki_id": "battd-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#battd-parameters"
+  },
+  "BATTE_": {
+    "wiki_id": "batte-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batte-parameters"
+  },
+  "BATTF_": {
+    "wiki_id": "battf-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#battf-parameters"
+  },
+  "BATTG_": {
+    "wiki_id": "battg-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#battg-parameters"
+  },
+  "BATT_": {
+    "wiki_id": "batt-parameters",
+    "desc": "Controls enabling monitoring of the battery's voltage and current",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#batt-parameters"
+  },
+  "BCN": {
+    "wiki_id": "bcn-parameters",
+    "desc": "What type of beacon based position estimation device is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#bcn-parameters"
+  },
+  "BRD_": {
+    "wiki_id": "brd-parameters",
+    "desc": "Enable flow control on serial 1 (telemetry 1). You must have the RTS and CTS pins connected to your radio. The standard DF13 6 pin connector for a 3DR radio does have those pins connected. If this is set to 2 then flow control will be auto-detected by checking for the output buffer filling on startup. Note that the PX4v1 does not have hardware flow control pins on this port, so you should leave this disabled.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#brd-parameters"
+  },
+  "BRD_RADIO": {
+    "wiki_id": "brd-radio-parameters",
+    "desc": "This enables support for direct attached radio receivers",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#brd-radio-parameters"
+  },
+  "BRD_RTC": {
+    "wiki_id": "brd-rtc-parameters",
+    "desc": "Specifies which sources of UTC time will be accepted",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#brd-rtc-parameters"
+  },
+  "BTN_": {
+    "wiki_id": "btn-parameters",
+    "desc": "This enables the button checking module. When this is disabled the parameters for setting button inputs are not visible",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#btn-parameters"
+  },
+  "CAM": {
+    "wiki_id": "cam-parameters",
+    "desc": "Postpone shooting if roll is greater than limit. (0=Disable, will shoot regardless of roll).",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cam-parameters"
+  },
+  "CAM1": {
+    "wiki_id": "cam1-parameters",
+    "desc": "how to trigger the camera to take a picture",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cam1-parameters"
+  },
+  "CAM1_RC_": {
+    "wiki_id": "cam1-rc-parameters",
+    "desc": "RunCam device type used to determine OSD menu structure and shutter options.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cam1-rc-parameters"
+  },
+  "CAM2": {
+    "wiki_id": "cam2-parameters",
+    "desc": "how to trigger the camera to take a picture",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cam2-parameters"
+  },
+  "CAM2_RC_": {
+    "wiki_id": "cam2-rc-parameters",
+    "desc": "RunCam device type used to determine OSD menu structure and shutter options.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cam2-rc-parameters"
+  },
+  "CAN_": {
+    "wiki_id": "can-parameters",
+    "desc": "Loglevel for recording initialisation and debug information from CAN Interface",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-parameters"
+  },
+  "CAN_D1_": {
+    "wiki_id": "can-d1-parameters",
+    "desc": "Enabling this option starts selected protocol that will use this virtual driver",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d1-parameters"
+  },
+  "CAN_D1_PC_": {
+    "wiki_id": "can-d1-pc-parameters",
+    "desc": "Bitmask defining which ESC (motor) channels are to be transmitted over Piccolo CAN",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d1-pc-parameters"
+  },
+  "CAN_D1_UC_": {
+    "wiki_id": "can-d1-uc-parameters",
+    "desc": "DroneCAN node ID used by the driver itself on this network",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d1-uc-parameters"
+  },
+  "CAN_D2_": {
+    "wiki_id": "can-d2-parameters",
+    "desc": "Enabling this option starts selected protocol that will use this virtual driver",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d2-parameters"
+  },
+  "CAN_D2_PC_": {
+    "wiki_id": "can-d2-pc-parameters",
+    "desc": "Bitmask defining which ESC (motor) channels are to be transmitted over Piccolo CAN",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d2-pc-parameters"
+  },
+  "CAN_D2_UC_": {
+    "wiki_id": "can-d2-uc-parameters",
+    "desc": "DroneCAN node ID used by the driver itself on this network",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d2-uc-parameters"
+  },
+  "CAN_D3_": {
+    "wiki_id": "can-d3-parameters",
+    "desc": "Enabling this option starts selected protocol that will use this virtual driver",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d3-parameters"
+  },
+  "CAN_D3_PC_": {
+    "wiki_id": "can-d3-pc-parameters",
+    "desc": "Bitmask defining which ESC (motor) channels are to be transmitted over Piccolo CAN",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d3-pc-parameters"
+  },
+  "CAN_D3_UC_": {
+    "wiki_id": "can-d3-uc-parameters",
+    "desc": "DroneCAN node ID used by the driver itself on this network",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-d3-uc-parameters"
+  },
+  "CAN_P1_": {
+    "wiki_id": "can-p1-parameters",
+    "desc": "Enabling this option enables use of CAN buses.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-p1-parameters"
+  },
+  "CAN_P2_": {
+    "wiki_id": "can-p2-parameters",
+    "desc": "Enabling this option enables use of CAN buses.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-p2-parameters"
+  },
+  "CAN_P3_": {
+    "wiki_id": "can-p3-parameters",
+    "desc": "Enabling this option enables use of CAN buses.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-p3-parameters"
+  },
+  "CAN_SLCAN_": {
+    "wiki_id": "can-slcan-parameters",
+    "desc": "CAN Interface ID to be routed to SLCAN, 0 means no routing",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#can-slcan-parameters"
+  },
+  "CC": {
+    "wiki_id": "cc-parameters",
+    "desc": "Custom control type to be used",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cc-parameters"
+  },
+  "CHUTE_": {
+    "wiki_id": "chute-parameters",
+    "desc": "Parachute release enabled or disabled",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#chute-parameters"
+  },
+  "CIRCLE_": {
+    "wiki_id": "circle-parameters",
+    "desc": "Circle mode's maximum turn rate in deg/sec.  Positive to turn clockwise, negative for counter clockwise. Final circle rate is also limited by speed and acceleration settings.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#circle-parameters"
+  },
+  "COMPASS_": {
+    "wiki_id": "compass-parameters",
+    "desc": "Offset to be added to the compass x-axis values to compensate for metal in the frame",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#compass-parameters"
+  },
+  "COMPASS_PMOT": {
+    "wiki_id": "compass-pmot-parameters",
+    "desc": "This enables per-motor compass corrections",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#compass-pmot-parameters"
+  },
+  "CUST_ROT": {
+    "wiki_id": "cust-rot-parameters",
+    "desc": "This enables custom rotations",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cust-rot-parameters"
+  },
+  "CUST_ROT1_": {
+    "wiki_id": "cust-rot1-parameters",
+    "desc": "Custom euler roll, euler 321 (yaw, pitch, roll) ordering",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cust-rot1-parameters"
+  },
+  "CUST_ROT2_": {
+    "wiki_id": "cust-rot2-parameters",
+    "desc": "Custom euler roll, euler 321 (yaw, pitch, roll) ordering",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#cust-rot2-parameters"
+  },
+  "DDS": {
+    "wiki_id": "dds-parameters",
+    "desc": "Enable DDS subsystem",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#dds-parameters"
+  },
+  "DDS_IP": {
+    "wiki_id": "dds-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#dds-ip-parameters"
+  },
+  "DID_": {
+    "wiki_id": "did-parameters",
+    "desc": "Enable ODID subsystem",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#did-parameters"
+  },
+  "EAHRS": {
+    "wiki_id": "eahrs-parameters",
+    "desc": "Type of AHRS device",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#eahrs-parameters"
+  },
+  "EFI": {
+    "wiki_id": "efi-parameters",
+    "desc": "What method of communication is used for EFI #1",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#efi-parameters"
+  },
+  "EFI_THRLIN": {
+    "wiki_id": "efi-thrlin-parameters",
+    "desc": "Enable EFI throttle linearisation",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#efi-thrlin-parameters"
+  },
+  "EK2_": {
+    "wiki_id": "ek2-parameters",
+    "desc": "This enables EKF2. Enabling EKF2 only makes the maths run, it does not mean it will be used for flight control. To use it for flight control set AHRS_EKF_TYPE=2. A reboot or restart will need to be performed after changing the value of EK2_ENABLE for it to take effect.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ek2-parameters"
+  },
+  "EK3_": {
+    "wiki_id": "ek3-parameters",
+    "desc": "This enables EKF3. Enabling EKF3 only makes the maths run, it does not mean it will be used for flight control. To use it for flight control set AHRS_EKF_TYPE=3. A reboot or restart will need to be performed after changing the value of EK3_ENABLE for it to take effect.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ek3-parameters"
+  },
+  "EK3_SRC": {
+    "wiki_id": "ek3-src-parameters",
+    "desc": "Position Horizontal Source (Primary)",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ek3-src-parameters"
+  },
+  "ESC_TLM": {
+    "wiki_id": "esc-tlm-parameters",
+    "desc": "Offset to apply to ESC numbers when reporting as ESC_TELEMETRY packets over MAVLink. This allows high numbered motors to be displayed as low numbered ESCs for convenience on GCS displays. A value of 4 would send ESC on output 5 as ESC number 1 in ESC_TELEMETRY packets",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#esc-tlm-parameters"
+  },
+  "FENCE_": {
+    "wiki_id": "fence-parameters",
+    "desc": "Allows you to enable (1) or disable (0) the fence functionality. Fences can still be enabled and disabled via mavlink or an RC option, but these changes are not persisted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#fence-parameters"
+  },
+  "FFT_": {
+    "wiki_id": "fft-parameters",
+    "desc": "Enable Gyro FFT analyser",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#fft-parameters"
+  },
+  "FHLD": {
+    "wiki_id": "fhld-parameters",
+    "desc": "FlowHold (horizontal) P gain.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#fhld-parameters"
+  },
+  "FILT1_": {
+    "wiki_id": "filt1-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt1-parameters"
+  },
+  "FILT2_": {
+    "wiki_id": "filt2-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt2-parameters"
+  },
+  "FILT3_": {
+    "wiki_id": "filt3-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt3-parameters"
+  },
+  "FILT4_": {
+    "wiki_id": "filt4-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt4-parameters"
+  },
+  "FILT5_": {
+    "wiki_id": "filt5-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt5-parameters"
+  },
+  "FILT6_": {
+    "wiki_id": "filt6-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt6-parameters"
+  },
+  "FILT7_": {
+    "wiki_id": "filt7-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt7-parameters"
+  },
+  "FILT8_": {
+    "wiki_id": "filt8-parameters",
+    "desc": "Filter Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#filt8-parameters"
+  },
+  "FLOW": {
+    "wiki_id": "flow-parameters",
+    "desc": "Optical flow sensor type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#flow-parameters"
+  },
+  "FOLL": {
+    "wiki_id": "foll-parameters",
+    "desc": "Enabled/disable following a target",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#foll-parameters"
+  },
+  "FRSKY_": {
+    "wiki_id": "frsky-parameters",
+    "desc": "Change the uplink sensor id (SPort only)",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#frsky-parameters"
+  },
+  "GEN_": {
+    "wiki_id": "gen-parameters",
+    "desc": "Generator type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gen-parameters"
+  },
+  "GEN_L_": {
+    "wiki_id": "gen-l-parameters",
+    "desc": "Seconds until maintenance required",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gen-l-parameters"
+  },
+  "GPS": {
+    "wiki_id": "gps-parameters",
+    "desc": "Navigation filter engine setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps-parameters"
+  },
+  "GPS1_": {
+    "wiki_id": "gps1-parameters",
+    "desc": "GPS type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps1-parameters"
+  },
+  "GPS1_MB_": {
+    "wiki_id": "gps1-mb-parameters",
+    "desc": "Controls the type of moving base used if using moving base.This is renamed in 4.6 and later to GPSx_MB_TYPE.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps1-mb-parameters"
+  },
+  "GPS2_": {
+    "wiki_id": "gps2-parameters",
+    "desc": "GPS type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps2-parameters"
+  },
+  "GPS2_MB_": {
+    "wiki_id": "gps2-mb-parameters",
+    "desc": "Controls the type of moving base used if using moving base.This is renamed in 4.6 and later to GPSx_MB_TYPE.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps2-mb-parameters"
+  },
+  "GPS_MB1_": {
+    "wiki_id": "gps-mb1-parameters",
+    "desc": "Controls the type of moving base used if using moving base.This is renamed in 4.6 and later to GPSx_MB_TYPE.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps-mb1-parameters"
+  },
+  "GPS_MB2_": {
+    "wiki_id": "gps-mb2-parameters",
+    "desc": "Controls the type of moving base used if using moving base.This is renamed in 4.6 and later to GPSx_MB_TYPE.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#gps-mb2-parameters"
+  },
+  "GRIP_": {
+    "wiki_id": "grip-parameters",
+    "desc": "Gripper enable/disable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#grip-parameters"
+  },
+  "H_": {
+    "wiki_id": "h-parameters",
+    "desc": "Tail type selection. Servo Only uses tail rotor pitch to provide yaw control (including stabilization) via an output assigned to Motor4.  Servo with External Gyro uses an external gyro to control tail rotor pitch via a servo.  Yaw control without stabilization is passed to the external gyro via the output assigned to Motor4.  Direct Drive Variable Pitch(DDVP) is used for tails that have a motor whose ESC is connected to an output with function HeliTailRSC. Tail pitch is still accomplished with a servo on an output assigned to Motor4 function.  Direct Drive Fixed Pitch (DDFP) CW is used for helicopters with a rotor that spins clockwise when viewed from above with a motor whose ESC is controlled by an output whose function is Motor4. Direct Drive Fixed Pitch (DDFP) CCW is used for helicopters with a rotor that spins counter clockwise when viewed from above with a motor whose ESC is controlled by an output whose function is Motor4. In both DDFP cases, no servo is used for the tail and the tail motor esc on Motor4 output is used to control the yaw axis using motor speed.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#h-parameters"
+  },
+  "H_RSC_": {
+    "wiki_id": "h-rsc-parameters",
+    "desc": "Throttle (HeliRSC Servo) output in percent to the external motor governor when motor interlock enabled (throttle hold off).",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#h-rsc-parameters"
+  },
+  "H_RSC_AROT_": {
+    "wiki_id": "h-rsc-arot-parameters",
+    "desc": "Allows you to enable (1) or disable (0) the autorotation functionality within the Rotor Speed Controller.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#h-rsc-arot-parameters"
+  },
+  "IM_": {
+    "wiki_id": "im-parameters",
+    "desc": "Used to soften collective pitch inputs near center point in Acro mode.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#im-parameters"
+  },
+  "INS": {
+    "wiki_id": "ins-parameters",
+    "desc": "Gyro sensor offsets of X axis. This is setup on each boot during gyro calibrations",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-parameters"
+  },
+  "INS4_": {
+    "wiki_id": "ins4-parameters",
+    "desc": "Use first IMU for attitude, velocity and position estimates",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins4-parameters"
+  },
+  "INS4_TCAL_": {
+    "wiki_id": "ins4-tcal-parameters",
+    "desc": "Enable the use of temperature calibration parameters for this IMU. For automatic learning set to 2 and also set the INS_TCALn_TMAX to the target temperature, then reboot",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins4-tcal-parameters"
+  },
+  "INS5_": {
+    "wiki_id": "ins5-parameters",
+    "desc": "Use first IMU for attitude, velocity and position estimates",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins5-parameters"
+  },
+  "INS5_TCAL_": {
+    "wiki_id": "ins5-tcal-parameters",
+    "desc": "Enable the use of temperature calibration parameters for this IMU. For automatic learning set to 2 and also set the INS_TCALn_TMAX to the target temperature, then reboot",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins5-tcal-parameters"
+  },
+  "INS_HNTC2_": {
+    "wiki_id": "ins-hntc2-parameters",
+    "desc": "Harmonic Notch Filter enable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-hntc2-parameters"
+  },
+  "INS_HNTC3_": {
+    "wiki_id": "ins-hntc3-parameters",
+    "desc": "Harmonic Notch Filter enable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-hntc3-parameters"
+  },
+  "INS_HNTC4_": {
+    "wiki_id": "ins-hntc4-parameters",
+    "desc": "Harmonic Notch Filter enable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-hntc4-parameters"
+  },
+  "INS_HNTCH_": {
+    "wiki_id": "ins-hntch-parameters",
+    "desc": "Harmonic Notch Filter enable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-hntch-parameters"
+  },
+  "INS_LOG_": {
+    "wiki_id": "ins-log-parameters",
+    "desc": "Number of samples to take when logging streams of IMU sensor readings.  Will be rounded down to a multiple of 32. This option takes effect on the next reboot.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-log-parameters"
+  },
+  "INS_TCAL1_": {
+    "wiki_id": "ins-tcal1-parameters",
+    "desc": "Enable the use of temperature calibration parameters for this IMU. For automatic learning set to 2 and also set the INS_TCALn_TMAX to the target temperature, then reboot",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-tcal1-parameters"
+  },
+  "INS_TCAL2_": {
+    "wiki_id": "ins-tcal2-parameters",
+    "desc": "Enable the use of temperature calibration parameters for this IMU. For automatic learning set to 2 and also set the INS_TCALn_TMAX to the target temperature, then reboot",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-tcal2-parameters"
+  },
+  "INS_TCAL3_": {
+    "wiki_id": "ins-tcal3-parameters",
+    "desc": "Enable the use of temperature calibration parameters for this IMU. For automatic learning set to 2 and also set the INS_TCALn_TMAX to the target temperature, then reboot",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ins-tcal3-parameters"
+  },
+  "KDE_": {
+    "wiki_id": "kde-parameters",
+    "desc": "Sets the number of motor poles to calculate the correct RPM value",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#kde-parameters"
+  },
+  "LAND_": {
+    "wiki_id": "land-parameters",
+    "desc": "The descent speed for the final stage of landing in m/s",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#land-parameters"
+  },
+  "LGR_": {
+    "wiki_id": "lgr-parameters",
+    "desc": "Enable landing gear control",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#lgr-parameters"
+  },
+  "LOG": {
+    "wiki_id": "log-parameters",
+    "desc": "Bitmap of what Logger backend types to enable. Block-based logging is available on SITL and boards with dataflash chips. Multiple backends can be selected.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#log-parameters"
+  },
+  "LOIT_": {
+    "wiki_id": "loit-parameters",
+    "desc": "Loiter maximum pilot requested lean angle. Set to zero for 2/3 of PSC_ANGLE_MAX/ATC_ANGLE_MAX. The maximum vehicle lean angle is still limited by PSC_ANGLE_MAX/ATC_ANGLE_MAX",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#loit-parameters"
+  },
+  "MAV": {
+    "wiki_id": "mav-parameters",
+    "desc": "Allows setting an individual MAVLink system id for this vehicle to distinguish it from others on the same network.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav-parameters"
+  },
+  "MAV1": {
+    "wiki_id": "mav1-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav1-parameters"
+  },
+  "MAV2": {
+    "wiki_id": "mav2-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav2-parameters"
+  },
+  "MAV3": {
+    "wiki_id": "mav3-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav3-parameters"
+  },
+  "MAV4": {
+    "wiki_id": "mav4-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav4-parameters"
+  },
+  "MAV5": {
+    "wiki_id": "mav5-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav5-parameters"
+  },
+  "MAV6": {
+    "wiki_id": "mav6-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav6-parameters"
+  },
+  "MAV7": {
+    "wiki_id": "mav7-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav7-parameters"
+  },
+  "MAV8": {
+    "wiki_id": "mav8-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav8-parameters"
+  },
+  "MAV9": {
+    "wiki_id": "mav9-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav9-parameters"
+  },
+  "MAV10": {
+    "wiki_id": "mav10-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav10-parameters"
+  },
+  "MAV11": {
+    "wiki_id": "mav11-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav11-parameters"
+  },
+  "MAV12": {
+    "wiki_id": "mav12-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav12-parameters"
+  },
+  "MAV13": {
+    "wiki_id": "mav13-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav13-parameters"
+  },
+  "MAV14": {
+    "wiki_id": "mav14-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav14-parameters"
+  },
+  "MAV15": {
+    "wiki_id": "mav15-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav15-parameters"
+  },
+  "MAV16": {
+    "wiki_id": "mav16-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav16-parameters"
+  },
+  "MAV17": {
+    "wiki_id": "mav17-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav17-parameters"
+  },
+  "MAV18": {
+    "wiki_id": "mav18-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav18-parameters"
+  },
+  "MAV19": {
+    "wiki_id": "mav19-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav19-parameters"
+  },
+  "MAV20": {
+    "wiki_id": "mav20-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav20-parameters"
+  },
+  "MAV21": {
+    "wiki_id": "mav21-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav21-parameters"
+  },
+  "MAV22": {
+    "wiki_id": "mav22-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav22-parameters"
+  },
+  "MAV23": {
+    "wiki_id": "mav23-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav23-parameters"
+  },
+  "MAV24": {
+    "wiki_id": "mav24-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav24-parameters"
+  },
+  "MAV25": {
+    "wiki_id": "mav25-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav25-parameters"
+  },
+  "MAV26": {
+    "wiki_id": "mav26-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav26-parameters"
+  },
+  "MAV27": {
+    "wiki_id": "mav27-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav27-parameters"
+  },
+  "MAV28": {
+    "wiki_id": "mav28-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav28-parameters"
+  },
+  "MAV29": {
+    "wiki_id": "mav29-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav29-parameters"
+  },
+  "MAV30": {
+    "wiki_id": "mav30-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav30-parameters"
+  },
+  "MAV31": {
+    "wiki_id": "mav31-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav31-parameters"
+  },
+  "MAV32": {
+    "wiki_id": "mav32-parameters",
+    "desc": "MAVLink Stream rate of RAW_IMU, SCALED_IMU2, SCALED_IMU3, SCALED_PRESSURE, SCALED_PRESSURE2, SCALED_PRESSURE3 and AIRSPEED",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mav32-parameters"
+  },
+  "MIS_": {
+    "wiki_id": "mis-parameters",
+    "desc": "The number of mission mission items that has been loaded by the ground station. Do not change this manually.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mis-parameters"
+  },
+  "MNT1": {
+    "wiki_id": "mnt1-parameters",
+    "desc": "Mount Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mnt1-parameters"
+  },
+  "MNT2": {
+    "wiki_id": "mnt2-parameters",
+    "desc": "Mount Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mnt2-parameters"
+  },
+  "MOT_": {
+    "wiki_id": "mot-parameters",
+    "desc": "Yaw control is given at least this pwm in microseconds range",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#mot-parameters"
+  },
+  "MSP": {
+    "wiki_id": "msp-parameters",
+    "desc": "Used for average cell voltage calculation",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#msp-parameters"
+  },
+  "NET_": {
+    "wiki_id": "net-parameters",
+    "desc": "Networking Enable",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-parameters"
+  },
+  "NET_GWADDR": {
+    "wiki_id": "net-gwaddr-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-gwaddr-parameters"
+  },
+  "NET_IPADDR": {
+    "wiki_id": "net-ipaddr-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-ipaddr-parameters"
+  },
+  "NET_MACADDR": {
+    "wiki_id": "net-macaddr-parameters",
+    "desc": "MAC address 1st byte",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-macaddr-parameters"
+  },
+  "NET_P1_": {
+    "wiki_id": "net-p1-parameters",
+    "desc": "Port type for network serial port. For the two client types a valid destination IP address must be set. For the two server types either 0.0.0.0 or a local address can be used. The UDP client type will use broadcast if the IP is set to 255.255.255.255 and will use UDP multicast if the IP is in the multicast address range.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p1-parameters"
+  },
+  "NET_P1_IP": {
+    "wiki_id": "net-p1-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p1-ip-parameters"
+  },
+  "NET_P2_": {
+    "wiki_id": "net-p2-parameters",
+    "desc": "Port type for network serial port. For the two client types a valid destination IP address must be set. For the two server types either 0.0.0.0 or a local address can be used. The UDP client type will use broadcast if the IP is set to 255.255.255.255 and will use UDP multicast if the IP is in the multicast address range.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p2-parameters"
+  },
+  "NET_P2_IP": {
+    "wiki_id": "net-p2-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p2-ip-parameters"
+  },
+  "NET_P3_": {
+    "wiki_id": "net-p3-parameters",
+    "desc": "Port type for network serial port. For the two client types a valid destination IP address must be set. For the two server types either 0.0.0.0 or a local address can be used. The UDP client type will use broadcast if the IP is set to 255.255.255.255 and will use UDP multicast if the IP is in the multicast address range.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p3-parameters"
+  },
+  "NET_P3_IP": {
+    "wiki_id": "net-p3-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p3-ip-parameters"
+  },
+  "NET_P4_": {
+    "wiki_id": "net-p4-parameters",
+    "desc": "Port type for network serial port. For the two client types a valid destination IP address must be set. For the two server types either 0.0.0.0 or a local address can be used. The UDP client type will use broadcast if the IP is set to 255.255.255.255 and will use UDP multicast if the IP is in the multicast address range.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p4-parameters"
+  },
+  "NET_P4_IP": {
+    "wiki_id": "net-p4-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-p4-ip-parameters"
+  },
+  "NET_REMPPP_IP": {
+    "wiki_id": "net-remppp-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-remppp-ip-parameters"
+  },
+  "NET_TEST_IP": {
+    "wiki_id": "net-test-ip-parameters",
+    "desc": "IPv4 address. Example: 192.xxx.xxx.xxx",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#net-test-ip-parameters"
+  },
+  "NMEA_": {
+    "wiki_id": "nmea-parameters",
+    "desc": "NMEA Output rate. This controls the interval at which all the enabled NMEA messages are sent. Most NMEA systems expect 100ms (10Hz) or slower.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#nmea-parameters"
+  },
+  "NTF_": {
+    "wiki_id": "ntf-parameters",
+    "desc": "Select the RGB LED brightness level. When USB is connected brightness will never be higher than low regardless of the setting.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#ntf-parameters"
+  },
+  "OA_": {
+    "wiki_id": "oa-parameters",
+    "desc": "Enabled/disable path planning around obstacles",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#oa-parameters"
+  },
+  "OA_BR_": {
+    "wiki_id": "oa-br-parameters",
+    "desc": "Object Avoidance will look this many meters ahead of vehicle",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#oa-br-parameters"
+  },
+  "OA_DB_": {
+    "wiki_id": "oa-db-parameters",
+    "desc": "OADatabase maximum number of points. Set to 0 to disable the OA Database. Larger means more points but is more cpu intensive to process",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#oa-db-parameters"
+  },
+  "OSD": {
+    "wiki_id": "osd-parameters",
+    "desc": "OSD type. TXONLY makes the OSD parameter selection available to other modules even if there is no native OSD support on the board, for instance CRSF.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd-parameters"
+  },
+  "OSD1_": {
+    "wiki_id": "osd1-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd1-parameters"
+  },
+  "OSD2_": {
+    "wiki_id": "osd2-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd2-parameters"
+  },
+  "OSD3_": {
+    "wiki_id": "osd3-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd3-parameters"
+  },
+  "OSD4_": {
+    "wiki_id": "osd4-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd4-parameters"
+  },
+  "OSD5_": {
+    "wiki_id": "osd5-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-parameters"
+  },
+  "OSD5_PARAM1": {
+    "wiki_id": "osd5-param1-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param1-parameters"
+  },
+  "OSD5_PARAM2": {
+    "wiki_id": "osd5-param2-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param2-parameters"
+  },
+  "OSD5_PARAM3": {
+    "wiki_id": "osd5-param3-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param3-parameters"
+  },
+  "OSD5_PARAM4": {
+    "wiki_id": "osd5-param4-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param4-parameters"
+  },
+  "OSD5_PARAM5": {
+    "wiki_id": "osd5-param5-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param5-parameters"
+  },
+  "OSD5_PARAM6": {
+    "wiki_id": "osd5-param6-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param6-parameters"
+  },
+  "OSD5_PARAM7": {
+    "wiki_id": "osd5-param7-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param7-parameters"
+  },
+  "OSD5_PARAM8": {
+    "wiki_id": "osd5-param8-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param8-parameters"
+  },
+  "OSD5_PARAM9": {
+    "wiki_id": "osd5-param9-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd5-param9-parameters"
+  },
+  "OSD6_": {
+    "wiki_id": "osd6-parameters",
+    "desc": "Enable this screen",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-parameters"
+  },
+  "OSD6_PARAM1": {
+    "wiki_id": "osd6-param1-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param1-parameters"
+  },
+  "OSD6_PARAM2": {
+    "wiki_id": "osd6-param2-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param2-parameters"
+  },
+  "OSD6_PARAM3": {
+    "wiki_id": "osd6-param3-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param3-parameters"
+  },
+  "OSD6_PARAM4": {
+    "wiki_id": "osd6-param4-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param4-parameters"
+  },
+  "OSD6_PARAM5": {
+    "wiki_id": "osd6-param5-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param5-parameters"
+  },
+  "OSD6_PARAM6": {
+    "wiki_id": "osd6-param6-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param6-parameters"
+  },
+  "OSD6_PARAM7": {
+    "wiki_id": "osd6-param7-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param7-parameters"
+  },
+  "OSD6_PARAM8": {
+    "wiki_id": "osd6-param8-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param8-parameters"
+  },
+  "OSD6_PARAM9": {
+    "wiki_id": "osd6-param9-parameters",
+    "desc": "Enable setting",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#osd6-param9-parameters"
+  },
+  "PLND_": {
+    "wiki_id": "plnd-parameters",
+    "desc": "Precision Land enabled/disabled",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#plnd-parameters"
+  },
+  "PRX": {
+    "wiki_id": "prx-parameters",
+    "desc": "Ignore proximity data that is within 1 meter of the ground below the vehicle. This requires a downward facing rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx-parameters"
+  },
+  "PRX1": {
+    "wiki_id": "prx1-parameters",
+    "desc": "What type of proximity sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx1-parameters"
+  },
+  "PRX1_": {
+    "wiki_id": "id3",
+    "desc": "The receive ID of the CAN frames. A value of zero means all IDs are accepted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id3"
+  },
+  "PRX2": {
+    "wiki_id": "prx2-parameters",
+    "desc": "What type of proximity sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx2-parameters"
+  },
+  "PRX2_": {
+    "wiki_id": "id5",
+    "desc": "The receive ID of the CAN frames. A value of zero means all IDs are accepted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id5"
+  },
+  "PRX3": {
+    "wiki_id": "prx3-parameters",
+    "desc": "What type of proximity sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx3-parameters"
+  },
+  "PRX3_": {
+    "wiki_id": "id7",
+    "desc": "The receive ID of the CAN frames. A value of zero means all IDs are accepted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id7"
+  },
+  "PRX4": {
+    "wiki_id": "prx4-parameters",
+    "desc": "What type of proximity sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx4-parameters"
+  },
+  "PRX4_": {
+    "wiki_id": "id9",
+    "desc": "The receive ID of the CAN frames. A value of zero means all IDs are accepted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id9"
+  },
+  "PRX5": {
+    "wiki_id": "prx5-parameters",
+    "desc": "What type of proximity sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#prx5-parameters"
+  },
+  "PRX5_": {
+    "wiki_id": "id11",
+    "desc": "The receive ID of the CAN frames. A value of zero means all IDs are accepted.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#id11"
+  },
+  "PSC": {
+    "wiki_id": "psc-parameters",
+    "desc": "Position (vertical) controller P gain. Converts the difference between the desired altitude and actual altitude into a climb or descent rate which is passed to the throttle rate controller. Previously _POSZ_P.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#psc-parameters"
+  },
+  "RALLY_": {
+    "wiki_id": "rally-parameters",
+    "desc": "Number of rally points currently loaded",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rally-parameters"
+  },
+  "RC": {
+    "wiki_id": "rc-parameters",
+    "desc": "Timeout after which RC overrides will no longer be used, and RC input will resume, 0 will disable RC overrides, -1 will never timeout, and continue using overrides until they are disabled",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc-parameters"
+  },
+  "RC1_": {
+    "wiki_id": "rc1-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc1-parameters"
+  },
+  "RC2_": {
+    "wiki_id": "rc2-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc2-parameters"
+  },
+  "RC3_": {
+    "wiki_id": "rc3-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc3-parameters"
+  },
+  "RC4_": {
+    "wiki_id": "rc4-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc4-parameters"
+  },
+  "RC5_": {
+    "wiki_id": "rc5-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc5-parameters"
+  },
+  "RC6_": {
+    "wiki_id": "rc6-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc6-parameters"
+  },
+  "RC7_": {
+    "wiki_id": "rc7-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc7-parameters"
+  },
+  "RC8_": {
+    "wiki_id": "rc8-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc8-parameters"
+  },
+  "RC9_": {
+    "wiki_id": "rc9-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc9-parameters"
+  },
+  "RC10_": {
+    "wiki_id": "rc10-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc10-parameters"
+  },
+  "RC11_": {
+    "wiki_id": "rc11-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc11-parameters"
+  },
+  "RC12_": {
+    "wiki_id": "rc12-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc12-parameters"
+  },
+  "RC13_": {
+    "wiki_id": "rc13-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc13-parameters"
+  },
+  "RC14_": {
+    "wiki_id": "rc14-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc14-parameters"
+  },
+  "RC15_": {
+    "wiki_id": "rc15-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc15-parameters"
+  },
+  "RC16_": {
+    "wiki_id": "rc16-parameters",
+    "desc": "RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rc16-parameters"
+  },
+  "RCMAP_": {
+    "wiki_id": "rcmap-parameters",
+    "desc": "Roll channel number. This is useful when you have a RC transmitter that can't change the channel order easily. Roll is normally on channel 1, but you can move it to any channel with this parameter.  Reboot is required for changes to take effect.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rcmap-parameters"
+  },
+  "RELAY1_": {
+    "wiki_id": "relay1-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay1-parameters"
+  },
+  "RELAY2_": {
+    "wiki_id": "relay2-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay2-parameters"
+  },
+  "RELAY3_": {
+    "wiki_id": "relay3-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay3-parameters"
+  },
+  "RELAY4_": {
+    "wiki_id": "relay4-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay4-parameters"
+  },
+  "RELAY5_": {
+    "wiki_id": "relay5-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay5-parameters"
+  },
+  "RELAY6_": {
+    "wiki_id": "relay6-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay6-parameters"
+  },
+  "RELAY7_": {
+    "wiki_id": "relay7-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay7-parameters"
+  },
+  "RELAY8_": {
+    "wiki_id": "relay8-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay8-parameters"
+  },
+  "RELAY9_": {
+    "wiki_id": "relay9-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay9-parameters"
+  },
+  "RELAY10_": {
+    "wiki_id": "relay10-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay10-parameters"
+  },
+  "RELAY11_": {
+    "wiki_id": "relay11-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay11-parameters"
+  },
+  "RELAY12_": {
+    "wiki_id": "relay12-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay12-parameters"
+  },
+  "RELAY13_": {
+    "wiki_id": "relay13-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay13-parameters"
+  },
+  "RELAY14_": {
+    "wiki_id": "relay14-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay14-parameters"
+  },
+  "RELAY15_": {
+    "wiki_id": "relay15-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay15-parameters"
+  },
+  "RELAY16_": {
+    "wiki_id": "relay16-parameters",
+    "desc": "The function the relay channel is mapped to.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#relay16-parameters"
+  },
+  "RNGFND1_": {
+    "wiki_id": "rngfnd1-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd1-parameters"
+  },
+  "RNGFND2_": {
+    "wiki_id": "rngfnd2-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd2-parameters"
+  },
+  "RNGFND3_": {
+    "wiki_id": "rngfnd3-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd3-parameters"
+  },
+  "RNGFND4_": {
+    "wiki_id": "rngfnd4-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd4-parameters"
+  },
+  "RNGFND5_": {
+    "wiki_id": "rngfnd5-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd5-parameters"
+  },
+  "RNGFND6_": {
+    "wiki_id": "rngfnd6-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd6-parameters"
+  },
+  "RNGFND7_": {
+    "wiki_id": "rngfnd7-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd7-parameters"
+  },
+  "RNGFND8_": {
+    "wiki_id": "rngfnd8-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd8-parameters"
+  },
+  "RNGFND9_": {
+    "wiki_id": "rngfnd9-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnd9-parameters"
+  },
+  "RNGFNDA_": {
+    "wiki_id": "rngfnda-parameters",
+    "desc": "Type of connected rangefinder",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rngfnda-parameters"
+  },
+  "RPM1_": {
+    "wiki_id": "rpm1-parameters",
+    "desc": "What type of RPM sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rpm1-parameters"
+  },
+  "RPM2_": {
+    "wiki_id": "rpm2-parameters",
+    "desc": "What type of RPM sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rpm2-parameters"
+  },
+  "RPM3_": {
+    "wiki_id": "rpm3-parameters",
+    "desc": "What type of RPM sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rpm3-parameters"
+  },
+  "RPM4_": {
+    "wiki_id": "rpm4-parameters",
+    "desc": "What type of RPM sensor is connected",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rpm4-parameters"
+  },
+  "RSSI_": {
+    "wiki_id": "rssi-parameters",
+    "desc": "Radio Receiver RSSI type. If your radio receiver supports RSSI of some kind, set it here, then set its associated RSSI_XXXXX parameters, if any.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rssi-parameters"
+  },
+  "RTL_": {
+    "wiki_id": "rtl-parameters",
+    "desc": "The minimum alt above home the vehicle will climb to before returning. If the vehicle is flying higher than this value it will return at its current altitude.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#rtl-parameters"
+  },
+  "SCHED_": {
+    "wiki_id": "sched-parameters",
+    "desc": "Set to non-zero to enable scheduler debug messages. When set to show \"Slips\" the scheduler will display a message whenever a scheduled task is delayed due to too much CPU load. When set to ShowOverruns the scheduled will display a message whenever a task takes longer than the limit promised in the task table.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#sched-parameters"
+  },
+  "SCR_": {
+    "wiki_id": "scr-parameters",
+    "desc": "Controls if scripting is enabled",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#scr-parameters"
+  },
+  "SERIAL": {
+    "wiki_id": "serial-parameters",
+    "desc": "The baud rate used on the USB console. Most stm32-based boards can support rates of up to 1500. If you setup a rate you cannot support and then can't connect to your board you should load a firmware from a different vehicle type. That will reset all your parameters to defaults.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#serial-parameters"
+  },
+  "SERVO": {
+    "wiki_id": "servo-parameters",
+    "desc": "Default output rate in Hz for all PWM outputs.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-parameters"
+  },
+  "SERVO1_": {
+    "wiki_id": "servo1-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo1-parameters"
+  },
+  "SERVO2_": {
+    "wiki_id": "servo2-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo2-parameters"
+  },
+  "SERVO3_": {
+    "wiki_id": "servo3-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo3-parameters"
+  },
+  "SERVO4_": {
+    "wiki_id": "servo4-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo4-parameters"
+  },
+  "SERVO5_": {
+    "wiki_id": "servo5-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo5-parameters"
+  },
+  "SERVO6_": {
+    "wiki_id": "servo6-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo6-parameters"
+  },
+  "SERVO7_": {
+    "wiki_id": "servo7-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo7-parameters"
+  },
+  "SERVO8_": {
+    "wiki_id": "servo8-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo8-parameters"
+  },
+  "SERVO9_": {
+    "wiki_id": "servo9-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo9-parameters"
+  },
+  "SERVO10_": {
+    "wiki_id": "servo10-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo10-parameters"
+  },
+  "SERVO11_": {
+    "wiki_id": "servo11-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo11-parameters"
+  },
+  "SERVO12_": {
+    "wiki_id": "servo12-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo12-parameters"
+  },
+  "SERVO13_": {
+    "wiki_id": "servo13-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo13-parameters"
+  },
+  "SERVO14_": {
+    "wiki_id": "servo14-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo14-parameters"
+  },
+  "SERVO15_": {
+    "wiki_id": "servo15-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo15-parameters"
+  },
+  "SERVO16_": {
+    "wiki_id": "servo16-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo16-parameters"
+  },
+  "SERVO17_": {
+    "wiki_id": "servo17-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo17-parameters"
+  },
+  "SERVO18_": {
+    "wiki_id": "servo18-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo18-parameters"
+  },
+  "SERVO19_": {
+    "wiki_id": "servo19-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo19-parameters"
+  },
+  "SERVO20_": {
+    "wiki_id": "servo20-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo20-parameters"
+  },
+  "SERVO21_": {
+    "wiki_id": "servo21-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo21-parameters"
+  },
+  "SERVO22_": {
+    "wiki_id": "servo22-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo22-parameters"
+  },
+  "SERVO23_": {
+    "wiki_id": "servo23-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo23-parameters"
+  },
+  "SERVO24_": {
+    "wiki_id": "servo24-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo24-parameters"
+  },
+  "SERVO25_": {
+    "wiki_id": "servo25-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo25-parameters"
+  },
+  "SERVO26_": {
+    "wiki_id": "servo26-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo26-parameters"
+  },
+  "SERVO27_": {
+    "wiki_id": "servo27-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo27-parameters"
+  },
+  "SERVO28_": {
+    "wiki_id": "servo28-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo28-parameters"
+  },
+  "SERVO29_": {
+    "wiki_id": "servo29-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo29-parameters"
+  },
+  "SERVO30_": {
+    "wiki_id": "servo30-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo30-parameters"
+  },
+  "SERVO31_": {
+    "wiki_id": "servo31-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo31-parameters"
+  },
+  "SERVO32_": {
+    "wiki_id": "servo32-parameters",
+    "desc": "minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo32-parameters"
+  },
+  "SERVO_BLH_": {
+    "wiki_id": "servo-blh-parameters",
+    "desc": "Enable of BLHeli pass-thru servo protocol support to specific channels. This mask is in addition to motors enabled using SERVO_BLH_AUTO (if any)",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-blh-parameters"
+  },
+  "SERVO_FTW_": {
+    "wiki_id": "servo-ftw-parameters",
+    "desc": "Servo channel mask specifying FETtec ESC output.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-ftw-parameters"
+  },
+  "SERVO_ROB_": {
+    "wiki_id": "servo-rob-parameters",
+    "desc": "Position minimum at servo min value. This should be within the position control range of the servos, normally 0 to 4095",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-rob-parameters"
+  },
+  "SERVO_SBUS_": {
+    "wiki_id": "servo-sbus-parameters",
+    "desc": "This sets the SBUS output frame rate in Hz.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-sbus-parameters"
+  },
+  "SERVO_VOLZ_": {
+    "wiki_id": "servo-volz-parameters",
+    "desc": "Enable of volz servo protocol to specific channels",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#servo-volz-parameters"
+  },
+  "SID": {
+    "wiki_id": "sid-parameters",
+    "desc": "Controls which axis are being excited.  Set to non-zero to see more parameters",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#sid-parameters"
+  },
+  "S": {
+    "wiki_id": "simulation-parameters",
+    "desc": "bias of simulated accelerometer sensor (X-axis)",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#simulation-parameters"
+  },
+  "SPRAY_": {
+    "wiki_id": "spray-parameters",
+    "desc": "Allows you to enable (1) or disable (0) the sprayer",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#spray-parameters"
+  },
+  "SRTL_": {
+    "wiki_id": "srtl-parameters",
+    "desc": "SmartRTL accuracy. The minimum distance between points.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#srtl-parameters"
+  },
+  "STAT": {
+    "wiki_id": "stat-parameters",
+    "desc": "Number of times board has been booted",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#stat-parameters"
+  },
+  "TCAL": {
+    "wiki_id": "tcal-parameters",
+    "desc": "Enable temperature calibration. Set to 0 to disable. Set to 1 to use learned values. Set to 2 to learn new values and use the values",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#tcal-parameters"
+  },
+  "TEMP": {
+    "wiki_id": "temp-parameters",
+    "desc": "Enables temperature sensor logging",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp-parameters"
+  },
+  "TEMP1_": {
+    "wiki_id": "temp1-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp1-parameters"
+  },
+  "TEMP2_": {
+    "wiki_id": "temp2-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp2-parameters"
+  },
+  "TEMP3_": {
+    "wiki_id": "temp3-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp3-parameters"
+  },
+  "TEMP4_": {
+    "wiki_id": "temp4-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp4-parameters"
+  },
+  "TEMP5_": {
+    "wiki_id": "temp5-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp5-parameters"
+  },
+  "TEMP6_": {
+    "wiki_id": "temp6-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp6-parameters"
+  },
+  "TEMP7_": {
+    "wiki_id": "temp7-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp7-parameters"
+  },
+  "TEMP8_": {
+    "wiki_id": "temp8-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp8-parameters"
+  },
+  "TEMP9_": {
+    "wiki_id": "temp9-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp9-parameters"
+  },
+  "TEMP10_": {
+    "wiki_id": "temp10-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp10-parameters"
+  },
+  "TEMP11_": {
+    "wiki_id": "temp11-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp11-parameters"
+  },
+  "TEMP12_": {
+    "wiki_id": "temp12-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp12-parameters"
+  },
+  "TEMP13_": {
+    "wiki_id": "temp13-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp13-parameters"
+  },
+  "TEMP14_": {
+    "wiki_id": "temp14-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp14-parameters"
+  },
+  "TEMP15_": {
+    "wiki_id": "temp15-parameters",
+    "desc": "Enables temperature sensors",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#temp15-parameters"
+  },
+  "TERRAIN_": {
+    "wiki_id": "terrain-parameters",
+    "desc": "enable terrain data. This enables the vehicle storing a database of terrain data on the SD card. The terrain data is requested from the ground station as needed, and stored for later use on the SD card. To be useful the ground station must support TERRAIN_REQUEST messages and have access to a terrain database, such as the SRTM database.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#terrain-parameters"
+  },
+  "TMODE": {
+    "wiki_id": "tmode-parameters",
+    "desc": "tmode (or \"toy\" mode) gives a simplified user interface designed for mass market drones. Version1 is for the SkyViper V2450GPS. Version2 is for the F412 based boards",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#tmode-parameters"
+  },
+  "VISO": {
+    "wiki_id": "viso-parameters",
+    "desc": "Visual odometry camera connection type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#viso-parameters"
+  },
+  "VTX_": {
+    "wiki_id": "vtx-parameters",
+    "desc": "Toggles the Video Transmitter on and off",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#vtx-parameters"
+  },
+  "WINCH": {
+    "wiki_id": "winch-parameters",
+    "desc": "Winch Type",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#winch-parameters"
+  },
+  "WPNAV_": {
+    "wiki_id": "wpnav-parameters",
+    "desc": "Defines the speed in cm/s which the aircraft will attempt to maintain horizontally during a WP mission",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#wpnav-parameters"
+  },
+  "WVANE_": {
+    "wiki_id": "wvane-parameters",
+    "desc": "Enable weather vaning.  When active, the aircraft will automatically yaw into wind when in a VTOL position controlled mode. Pilot yaw commands override the weathervaning action.",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#wvane-parameters"
+  },
+  "ZIGZ_": {
+    "wiki_id": "zigz-parameters",
+    "desc": "Allows you to enable (1) or disable (0) ZigZag auto feature",
+    "range": "N/A",
+    "units": "N/A",
+    "default": "N/A",
+    "wiki_url": "https://ardupilot.org/copter/docs/parameters.html#zigz-parameters"
+  }
+}
