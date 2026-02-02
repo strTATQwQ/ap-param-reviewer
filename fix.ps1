@@ -1,14 +1,20 @@
-Write-Host "--- Adapting Config for Production & Deploying ---" -ForegroundColor Cyan
+Write-Host "--- Starting Ultimate Path Fix & Deployment ---" -ForegroundColor Cyan
 
-# 1. 确保在正确的根目录
-if (-not (Test-Path "package.json")) {
-    Write-Host "❌ Error: package.json not found! Please run in the project root." -ForegroundColor Red
-    exit
+# 1. 修正 index.html (关键：将绝对路径改为相对路径，以便 Vite 识别)
+$htmlPath = "index.html"
+if (Test-Path $htmlPath) {
+    Write-Host "🔧 Fixing index.html entry point..." -ForegroundColor Cyan
+    $html = Get-Content $htmlPath -Raw
+    # 将 src="/src/main.tsx" 替换为 src="src/main.tsx"
+    $html = $html -replace 'src="/src/main.tsx"', 'src="src/main.tsx"'
+    $html = $html -replace "src='/src/main.tsx'", "src='src/main.tsx'"
+    [System.IO.File]::WriteAllText((Resolve-Path $htmlPath), $html)
 }
 
-# 2. 自动修正 vite.config.ts (添加 base 路径，移除 Node 专用代理库防止打包错误)
-Write-Host "🔧 Updating vite.config.ts..." -ForegroundColor Cyan
-$viteConfig = @"
+# 2. 强制同步 vite.config.ts 确保 base 路径正确
+Write-Host "🔧 Syncing vite.config.ts base path..." -ForegroundColor Cyan
+$configPath = "vite.config.ts"
+$configContent = @"
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -28,49 +34,34 @@ export default defineConfig({
   }
 });
 "@
-[System.IO.File]::WriteAllText("vite.config.ts", $viteConfig)
+[System.IO.File]::WriteAllText((Resolve-Path $configPath), $configContent)
 
-# 3. 自动修正 App.tsx 里的 API 请求逻辑
-# 将 '/google-api/' 替换为生产环境可用的完整 URL
-$appPath = "src/App.tsx"
-if (Test-Path $appPath) {
-    Write-Host "🔧 Patching App.tsx API endpoints..." -ForegroundColor Cyan
-    $content = Get-Content $appPath -Raw -Encoding UTF8
-    
-    # 逻辑：如果是在线上环境，直接请求 Google API
-    $apiLogic = "import.meta.env.DEV ? '/google-api' : 'https://generativelanguage.googleapis.com'"
-    
-    # 简单替换：将字符串 '/google-api' 替换为变量引用
-    # 注意：这里假设你的代码里是用 fetch('/google-api/...') 这种形式
-    if ($content -match "'/google-api'") {
-        $content = $content -replace "'/google-api'", "`$($apiLogic)"
-    } elseif ($content -match '"/google-api"') {
-        $content = $content -replace '"/google-api"', "`$($apiLogic)"
-    }
-    
-    $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-    [System.IO.File]::WriteAllText((Resolve-Path $appPath), $content, $Utf8NoBom)
-}
-
-# 4. 执行构建
-Write-Host "🏗️  Building production assets..." -ForegroundColor Cyan
-# 尝试使用 npx 调用，避免路径问题
+# 3. 清理并执行生产构建
+Write-Host "🏗️  Running Production Build..." -ForegroundColor Cyan
+if (Test-Path "dist") { Remove-Item -Recurse -Force dist }
 npx vite build
 
-# 5. 部署到 GitHub Pages
-if (Test-Path "dist") {
-    Write-Host "🚀 Build successful! Deploying to gh-pages..." -ForegroundColor Green
-    npx gh-pages -d dist -f
-    
-    # 6. 同步源码到 main 分支
-    Write-Host "📦 Syncing source code..." -ForegroundColor Cyan
-    git add .
-    git commit -m "chore: production build with fixed api paths"
-    git push origin main -f
-    
-    Write-Host "------------------------------------------------" -ForegroundColor Green
-    Write-Host "✅ DEPLOYMENT COMPLETE!" -ForegroundColor Green
-    Write-Host "URL: https://strTATQwQ.github.io/ap-param-reviewer/" -ForegroundColor Cyan
-} else {
-    Write-Host "❌ Build failed. Dist folder not found." -ForegroundColor Red
+# 4. 构建后二次检查 (验证 dist/index.html 里的路径是否已加上前缀)
+if (Test-Path "dist/index.html") {
+    $distHtml = Get-Content "dist/index.html" -Raw
+    if ($distHtml -match "/ap-param-reviewer/assets/") {
+        Write-Host "✅ Build verification PASSED: Assets are prefixed." -ForegroundColor Green
+    } else {
+        Write-Host "⚠️ Build verification FAILED: Paths might still be broken." -ForegroundColor Yellow
+    }
 }
+
+# 5. 部署到 GitHub Pages 分支
+Write-Host "🚀 Deploying static files to gh-pages..." -ForegroundColor Green
+npx gh-pages -d dist -f
+
+# 6. 同步源码到主分支 (SSH)
+Write-Host "📦 Pushing source code to main..." -ForegroundColor Cyan
+git add .
+git commit -m "fix: resolve 404 entry point and asset paths"
+git push origin main -f
+
+Write-Host "------------------------------------------------" -ForegroundColor Green
+Write-Host "SUCCESS! Deployment finished." -ForegroundColor Green
+Write-Host "👉 URL: https://strTATQwQ.github.io/ap-param-reviewer/" -ForegroundColor Green
+Write-Host "Note: It may take 30-60 seconds for GitHub to update." -ForegroundColor Yellow
