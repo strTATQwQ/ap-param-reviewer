@@ -38,7 +38,7 @@
 
 - **前端框架**: React 18 (TypeScript)
 - **构建工具**: Vite
-- **UI 组件**: Tailwind CSS / Lucide React
+- **UI 组件**: Tailwind CSS / Lucide React 
 
 ------
 
