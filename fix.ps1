@@ -1,55 +1,50 @@
-Write-Host "--- Starting Deep Reset & Build Verification ---" -ForegroundColor Cyan
+Write-Host "--- Starting Emergency Path Stitching ---" -ForegroundColor Cyan
 
-# 1. 环境彻底清理
+# 1. 清理并构建
 if (Test-Path "dist") { Remove-Item -Recurse -Force dist }
-if (Test-Path "package-lock.json") { Remove-Item -Force package-lock.json }
-
-# 2. 修正 index.html (确保它是 Vite 标准格式)
-$htmlContent = @"
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AP Param Reviewer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-"@
-[System.IO.File]::WriteAllText("index.html", $htmlContent)
-
-# 3. 强制执行构建 (使用物理路径，绕过所有环境变量问题)
 Write-Host "🏗️ Executing Vite Build..." -ForegroundColor Yellow
-npm install
-node node_modules/vite/bin/vite.js build
+npx vite build
 
-# 4. 【关键步骤】检查构建产物
-if (Test-Path "dist/assets") {
-    $jsFiles = Get-ChildItem -Path "dist/assets" -Filter "*.js"
-    if ($jsFiles) {
-        Write-Host "✅ Found compiled JavaScript: $($jsFiles[0].Name)" -ForegroundColor Green
+# 2. 核心补丁：手动修正 dist/index.html 中的路径引用
+if (Test-Path "dist/index.html") {
+    $distHtml = Get-Content "dist/index.html" -Raw
+    
+    # 查找 dist/assets 目录下生成的真实 JS 文件名
+    $jsFile = Get-ChildItem "dist/assets/*.js" | Select-Object -First 1
+    
+    if ($jsFile) {
+        $jsName = $jsFile.Name
+        Write-Host "Found compiled JS: $jsName" -ForegroundColor Green
+        
+        # 定义要替换的目标和结果（使用单引号包裹含双引号的字符串）
+        $oldTag = '<script type="module" src="/src/main.tsx"></script>'
+        $newTag = '<script type="module" src="/ap-param-reviewer/assets/' + $jsName + '"></script>'
+        
+        # 执行替换
+        $distHtml = $distHtml.Replace($oldTag, $newTag)
+        
+        # 写回文件
+        [System.IO.File]::WriteAllText((Resolve-Path "dist/index.html"), $distHtml)
+        Write-Host "✅ Successfully stitched $jsName into index.html" -ForegroundColor Green
     } else {
-        Write-Host "❌ ERROR: Build finished but NO JavaScript files were created in dist/assets!" -ForegroundColor Red
-        Write-Host "Stopping deployment to prevent broken upload." -ForegroundColor Red
+        Write-Host "❌ Error: No JS file found in dist/assets!" -ForegroundColor Red
         exit
     }
-} else {
-    Write-Host "❌ ERROR: 'dist' folder was not created!" -ForegroundColor Red
-    exit
 }
 
-# 5. 部署 (添加 .nojekyll)
-New-Item -Path "dist\.nojekyll" -ItemType File -Force | Out-Null
-Write-Host "🚀 Deploying verified assets to gh-pages..." -ForegroundColor Green
-npx gh-pages -d dist -f
-
-# 6. 推送源码
-git add .
-git commit -m "fix: verified production build with js assets"
-git push origin main -f
+# 3. 部署
+if (Test-Path "dist") {
+    # 解决 GitHub Pages 过滤问题
+    New-Item -Path "dist\.nojekyll" -ItemType File -Force | Out-Null
+    
+    Write-Host "🚀 Deploying to GitHub..." -ForegroundColor Cyan
+    npx gh-pages -d dist -f
+    
+    # 同步源码
+    git add .
+    git commit -m "fix: emergency path stitching for production"
+    git push origin main -f
+}
 
 Write-Host "------------------------------------------------" -ForegroundColor Green
-Write-Host "SUCCESS! If the site is still white, check if your API key is restricted." -ForegroundColor Cyan
+Write-Host "Deployment Complete! Please refresh in 1 minute." -ForegroundColor Green
