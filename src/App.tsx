@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.DEV ? $(import.meta.env.DEV ? '/google-api' : 'https://generativelanguage.googleapis.com') : 'https://generativelanguage.googleapis.com';
+const API_BASE = 'https://generativelanguage.googleapis.com';
 import React, { useState, useMemo, useRef } from 'react';
 import { DiffEditor } from '@monaco-editor/react';
 import { 
@@ -20,7 +20,7 @@ export default function App() {
   const [goal, setGoal] = useState("Explain: Optimize roll/pitch PIDs for 7-inch drone.");
   const [apiKey, setApiKey] = useState("");
   const [model, setModel] = useState("gemini-2.5-flash");
-  const [lang, setLang] = useState("zh");
+  const [lang, setLang] = useState("en");
   
   const [patches, setPatches] = useState([]);
   const [approved, setApproved] = useState(new Set());
@@ -64,7 +64,7 @@ export default function App() {
     setLoading(true);
     try {
       const contentForAI = (fileText || "").split('\n').slice(0, 2000).join('\n');
-      const url = `/google-api/v1beta/models/${model}:generateContent?key=${cleanKey}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${cleanKey}`;
       
       const systemPrompt = lang === 'zh' 
         ? "You are a senior ArduPilot engineer. Analyze params and provide suggestions. You MUST use Chinese for 'reason' and 'risk' fields. Return JSON: {patches: [{key, op, old, new, reason, risk}]}"
