@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.DEV ? $(import.meta.env.DEV ? '/google-api' : 'https://generativelanguage.googleapis.com') : 'https://generativelanguage.googleapis.com';
 import React, { useState, useMemo, useRef } from 'react';
 import { DiffEditor } from '@monaco-editor/react';
 import { 
