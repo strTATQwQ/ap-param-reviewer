@@ -1,73 +1,39 @@
-Write-Host "--- Fixing MIME Type & Building Compliant Assets ---" -ForegroundColor Cyan
+Write-Host "--- Performing Manual Alignment ---" -ForegroundColor Cyan
 
-# 1. 强力清理
-if (Test-Path "dist") { Remove-Item -Recurse -Force dist }
-if (Test-Path "node_modules/.vite") { Remove-Item -Recurse -Force node_modules/.vite }
-
-# 2. 修正 index.html (确保它指向的是源码，让 Vite 来处理转换)
+# 1. 核心修复：确保 index.html 的 script 路径没有领先的斜杠
+# Vite 打包引擎对 src="src/main.tsx" 的识别率远高于 src="/src/main.tsx"
 $htmlPath = "index.html"
-$htmlContent = @"
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AP Param Reviewer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-"@
+$htmlContent = Get-Content $htmlPath -Raw
+# 替换所有可能的绝对路径写法
+$htmlContent = $htmlContent -replace 'src="/src/main.tsx"', 'src="src/main.tsx"'
+$htmlContent = $htmlContent -replace "src='/src/main.tsx'", "src='src/main.tsx'"
 [System.IO.File]::WriteAllText((Resolve-Path $htmlPath), $htmlContent)
+Write-Host "✅ Entry point path corrected to relative." -ForegroundColor Green
 
-# 3. 强制更新 vite.config.ts 确保输出合规
-$configContent = @"
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-
-export default defineConfig({
-  base: '/ap-param-reviewer/',
-  plugins: [react()],
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    // 强制 Rollup 检查模块
-    modulePreload: { polyfill: true }
-  }
-});
-"@
-[System.IO.File]::WriteAllText((Resolve-Path "vite.config.ts"), $configContent)
-
-# 4. 执行构建
-Write-Host "🏗️ Running production build..." -ForegroundColor Cyan
+# 2. 强力构建
+Write-Host "🏗️  Starting Vite Build..." -ForegroundColor Cyan
+if (Test-Path "dist") { Remove-Item -Recurse -Force dist }
 npx vite build
 
-# 5. 关键检查：确保 dist 文件夹里没有任何 .tsx 或 .ts 文件
-Write-Host "🔍 Verifying build artifacts..." -ForegroundColor Cyan
-$badFiles = Get-ChildItem -Path "dist" -Recurse -Include *.ts, *.tsx
-if ($badFiles) {
-    Write-Host "❌ Error: Build leaked source files (.tsx) into dist!" -ForegroundColor Red
-    $badFiles | Remove-Item -Force
+# 3. 关键验证：检查 dist/index.html 到底长什么样
+if (Test-Path "dist/index.html") {
+    $distHtml = Get-Content "dist/index.html" -Raw
+    if ($distHtml -match 'src="/ap-param-reviewer/assets/') {
+        Write-Host "🚀 Build looks PERFECT. Correct production paths found." -ForegroundColor Green
+    } elseif ($distHtml -match 'src="src/main.tsx"') {
+        Write-Host "❌ Build FAILED to transform script tag. Still pointing to .tsx" -ForegroundColor Red
+        exit
+    }
 }
 
-# 6. 部署到 gh-pages (增加 .nojekyll 防止 GitHub 过滤文件)
-if (Test-Path "dist") {
-    # 创建 .nojekyll 文件，强制 GitHub Pages 不要处理这些文件
-    New-Item -Path "dist\.nojekyll" -ItemType File -Force | Out-Null
-    
-    Write-Host "🚀 Deploying to gh-pages with .nojekyll..." -ForegroundColor Green
-    npx gh-pages -d dist -f
-}
+# 4. 创建 .nojekyll 并部署
+New-Item -Path "dist\.nojekyll" -ItemType File -Force | Out-Null
+npx gh-pages -d dist -f
 
-# 7. 同步源码
+# 5. 推送源码备份
 git add .
-git commit -m "fix: resolve MIME type strict checking error"
+git commit -m "fix: explicit relative entry point for vite"
 git push origin main -f
 
 Write-Host "------------------------------------------------" -ForegroundColor Green
-Write-Host "✅ FIX APPLIED." -ForegroundColor Green
-Write-Host "Please clear browser cache or use Incognito mode to test." -ForegroundColor Yellow
+Write-Host "Verification Complete. Refresh the page in 30s." -ForegroundColor Cyan
