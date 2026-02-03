@@ -1,4 +1,4 @@
-﻿# 🛸 AP Param Reviewer
+﻿# 🛸 Ardupilot Param Reviewer
 
 **Ardupilot Param Reviewer** is an AI-assisted parameter tuning tool designed specifically for **ArduPilot** drone developers. Powered by **Google Gemini’s** advanced analytical capabilities, it provides in-depth interpretation, risk assessment, and optimization suggestions for complex `.param` configuration files. 
 
