@@ -1,74 +1,33 @@
-Write-Host "--- Starting Project Optimization & Document Split ---" -ForegroundColor Cyan
+Write-Host "--- Temporarily Removing ArduPilot Wiki Buttons ---" -ForegroundColor Cyan
 
-# 1. 处理 README 文件 (分离中英文)
-Write-Host "📄 Reorganizing Documentation..." -ForegroundColor Cyan
-# 将现有的 README 内容存为中文版
-if (Test-Path "README.md") {
-    $currentContent = Get-Content "README.md" -Raw
-    [System.IO.File]::WriteAllText((Resolve-Path "README_zh.md"), $currentContent, [System.Text.Encoding]::UTF8)
-}
-
-# 写入新的英文 README.md
-$enReadme = @"
-# 🛸 AP Param Reviewer
-
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://strTATQwQ.github.io/ap-param-reviewer/)
-
-AI-powered ArduPilot parameter analysis tool. Get deep insights into your .param files using Google Gemini.
-
-## ✨ Features
-- 🤖 **AI Review**: Identify risks and optimization points.
-- 🔍 **Smart Explanation**: Translate cryptic AP parameters into plain English.
-- 🔑 **Client-Side Security**: API Key is stored only in your browser's memory.
-- 🌐 **I18n**: Support for both English and Chinese.
-
-## 🚀 Quick Start
-1. Get a Gemini API Key from [Google AI Studio](https://aistudio.google.com/app/api-keys).
-2. Paste the Key into the input box at the **top right corner** of the webpage.
-3. Paste your parameters and click "Generate Review".
-
----
-[中文文档 (Chinese README)](./README_zh.md)
-"@
-[System.IO.File]::WriteAllText((Resolve-Path "README.md"), $enReadme, [System.Text.Encoding]::UTF8)
-
-# 2. 全局 UI 放大 10%
-Write-Host "🎨 Scaling UI by 10%..." -ForegroundColor Cyan
-$indexCssPath = "src/index.css"
-if (Test-Path $indexCssPath) {
-    # 注入 zoom 样式，适配现代浏览器
-    $cssExtra = "`n`nbody { zoom: 1.1; -moz-transform: scale(1.1); -moz-transform-origin: 0 0; }"
-    Add-Content -Path $indexCssPath -Value $cssExtra
-}
-
-# 3. 修复 App.tsx 中的逻辑错误
-Write-Host "🔧 Patching App.tsx (Logic Fixes)..." -ForegroundColor Cyan
 $appPath = "src/App.tsx"
 if (Test-Path $appPath) {
-    $content = Get-Content $appPath -Raw
+    Write-Host "🔧 Patching App.tsx..." -ForegroundColor Cyan
+    $content = Get-Content $appPath -Raw -Encoding UTF8
     
-    # 修正文件开头的 API_BASE 错误 (原代码有重复嵌套的 $() 符号)
-    $oldBase = 'const API_BASE = import.meta.env.DEV \? \$\(import.meta.env.DEV \? ''https://generativelanguage.googleapis.com'' : ''https://generativelanguage.googleapis.com''\) : ''https://generativelanguage.googleapis.com'';'
-    $newBase = "const API_BASE = 'https://generativelanguage.googleapis.com';"
-    $content = $content -replace $oldBase, $newBase
+    # 定位 Wiki 链接代码段并进行注释
+    # 原始代码片段: <a href={getWikiUrl(p.key)} ... ><ExternalLink size={12}/></a>
+    $oldLink = '<a href={getWikiUrl(p.key)} target="_blank" rel="noreferrer" className="text-slate-600 hover:text-blue-400 transition-colors"><ExternalLink size={12}/></a>'
+    $newLink = '{/* ' + $oldLink + ' */}'
     
-    # 确保默认语言为英文 ('en')
-    $content = $content -replace 'const \[lang, setLang\] = useState\("zh"\);', 'const [lang, setLang] = useState("en");'
-    $content = $content -replace "const \[lang, setLang\] = useState\('zh'\);", "const [lang, setLang] = useState('en');"
-
-    [System.IO.File]::WriteAllText((Resolve-Path $appPath), $content, (New-Object System.Text.UTF8Encoding($false)))
+    if ($content.Contains($oldLink)) {
+        $newContent = $content.Replace($oldLink, $newLink)
+        [System.IO.File]::WriteAllText((Resolve-Path $appPath), $newContent, (New-Object System.Text.UTF8Encoding($false)))
+        Write-Host "✅ Wiki link buttons have been commented out." -ForegroundColor Green
+    } else {
+        Write-Host "⚠️ Could not find the Wiki link code. It may already be hidden." -ForegroundColor Yellow
+    }
 }
 
-# 4. 构建并推送
+# 重新构建并发布到 GitHub Pages
 Write-Host "🏗️ Rebuilding and Deploying..." -ForegroundColor Yellow
 npx vite build
 npx gh-pages -d dist -f
 
-# 5. 推送源码
+# 推送源码
 git add .
-git commit -m "feat: default to EN, split README, scale UI 1.1x, fix API_BASE"
+git commit -m "chore: temporarily hide wiki links"
 git push origin main -f
 
 Write-Host "------------------------------------------------" -ForegroundColor Green
-Write-Host "✅ Optimization Complete!" -ForegroundColor Green
-Write-Host "Your page is now English by default and scaled 1.1x." -ForegroundColor Cyan
+Write-Host "Done! The Wiki buttons are now hidden from the UI." -ForegroundColor Green

@@ -147,7 +147,7 @@ export default function App() {
                           setApproved(next);
                         }} className="w-4 h-4 rounded border-slate-700 bg-slate-800 cursor-pointer" />
                         <span className="font-mono font-bold text-blue-400 text-sm tracking-tight">{p.key}</span>
-                        <a href={getWikiUrl(p.key)} target="_blank" rel="noreferrer" className="text-slate-600 hover:text-blue-400 transition-colors"><ExternalLink size={12}/></a>
+                        {/* <a href={getWikiUrl(p.key)} target="_blank" rel="noreferrer" className="text-slate-600 hover:text-blue-400 transition-colors"><ExternalLink size={12}/></a> */}
                         <span className={`ml-auto text-[9px] px-2 py-0.5 rounded-full font-bold uppercase ${p.risk === 'high' ? 'bg-red-500/10 text-red-500' : 'bg-slate-800 text-slate-500'}`}>{p.risk}</span>
                       </div>
                       <div className="flex items-center justify-between text-xs font-mono bg-black/40 p-2 rounded-lg border border-slate-800 mb-2 shadow-inner">
