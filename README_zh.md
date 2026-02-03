@@ -1,6 +1,6 @@
-# 🛸 AP Param Reviewer
+# 🛸 Ardupilot Param Reviewer
 
-**AP Param Reviewer** 是一款专为 ArduPilot 无人机开发者设计的 AI 辅助调参工具。它利用 Google Gemini 的强大分析能力，为复杂的 `.param` 配置文件提供深度解读、风险评估和优化建议。
+**Ardupilot Param Reviewer** 是一款专为 ArduPilot 无人机开发者设计的 AI 辅助调参工具。它利用 Google Gemini 的强大分析能力，为复杂的 `.param` 配置文件提供深度解读、风险评估和优化建议。
 
 ## ✨ 核心功能
 
